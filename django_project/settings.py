@@ -134,7 +134,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 LOGIN_REDIRECT_URL = "blog-home"
 LOGIN_URL = "login"
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "192.168.1.13"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "192.168.1.13","django-blog-heroku-app.herokuapp.com"]
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
