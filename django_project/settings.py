@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import  django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -156,10 +157,4 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
-# S3_URL = 'http://%s.s3.amazonaws.com' % "blog-django-files-yedidya"
-# MEDIA_DIRECTORY = '/media/'
-# MEDIA_URL = S3_URL + MEDIA_DIRECTORY
-
-
-# # MEDIA_URL = 'https://%s/%s/' % ("blog-django-files-yedidya.s3.eu-central-1.amazonaws.com", "media")
-# print(MEDIA_URL)
+django_heroku.settings(locals())
